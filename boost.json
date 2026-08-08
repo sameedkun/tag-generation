@@ -7,11 +7,16 @@
     "guidelines": true,
     "mcp": true,
     "nightwatch": false,
+    "packages": [
+        "anousss007/blatui"
+    ],
     "sail": false,
     "skills": [
         "infer-conventions",
         "laravel-best-practices",
+        "livewire-development",
         "pest-testing",
-        "tailwindcss-development"
+        "tailwindcss-development",
+        "blatui-development"
     ]
 }
