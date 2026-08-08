@@ -1,0 +1,95 @@
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+html,
+body {
+    width: 595.28pt;
+    height: 841.89pt;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.tag-sheet {
+    position: relative;
+    width: 595.28pt;
+    height: 841.89pt;
+}
+
+.tag {
+    position: absolute;
+    box-sizing: border-box;
+    width: 144.567pt;
+    height: 92.266pt;
+    overflow: hidden;
+    border: 0.48pt solid #000;
+    text-align: center;
+}
+
+.tag-column-0 { left: 4.252pt; }
+.tag-column-1 { left: 149.779pt; }
+.tag-column-2 { left: 295.306pt; }
+.tag-column-3 { left: 440.833pt; }
+
+.tag-row-0 { top: 4.252pt; }
+.tag-row-1 { top: 98.479pt; }
+.tag-row-2 { top: 192.705pt; }
+.tag-row-3 { top: 286.932pt; }
+.tag-row-4 { top: 381.158pt; }
+.tag-row-5 { top: 475.385pt; }
+.tag-row-6 { top: 569.611pt; }
+.tag-row-7 { top: 663.838pt; }
+
+.tag-title,
+.tag-address,
+.tag-label,
+.tag-date {
+    position: absolute;
+    right: 4pt;
+    left: 4pt;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+.tag-title {
+    top: 2.834pt;
+    overflow: hidden;
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 13.2pt;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.tag-address {
+    top: 19.102pt;
+    height: 18pt;
+    overflow: hidden;
+    font-size: 8pt;
+    font-weight: normal;
+    line-height: 8.797pt;
+}
+
+.tag-label {
+    font-size: 9pt;
+    font-weight: bold;
+    line-height: 10.8pt;
+}
+
+.tag-date {
+    font-size: 11pt;
+    font-weight: normal;
+    line-height: 13.2pt;
+}
+
+.tag-manufactured-label { top: 40.528pt; }
+.tag-manufactured-date { top: 51.005pt; }
+.tag-expiry-label { top: 65.747pt; }
+.tag-expiry-date { top: 76.224pt; }

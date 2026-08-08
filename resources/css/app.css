@@ -1,1 +1,15 @@
 @import "./blatui.css";
+
+:root {
+    --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+select option {
+  background-color: var(--card);
+  color: var(--foreground);
+}

@@ -1,0 +1,96 @@
+@page {
+    size: letter portrait;
+    margin: 0;
+}
+
+html,
+body {
+    width: 612pt;
+    height: 792pt;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.tag-sheet {
+    position: relative;
+    width: 612pt;
+    height: 792pt;
+}
+
+.tag {
+    position: absolute;
+    box-sizing: border-box;
+    width: 153pt;
+    height: 60.231pt;
+    overflow: hidden;
+    border: 0.5pt solid #000;
+}
+
+.tag-column-0 { left: 0; }
+.tag-column-1 { left: 153pt; }
+.tag-column-2 { left: 306pt; }
+.tag-column-3 { left: 459pt; }
+
+.tag-row-0 { top: 0; }
+.tag-row-1 { top: 60.231pt; }
+.tag-row-2 { top: 120.462pt; }
+.tag-row-3 { top: 180.692pt; }
+.tag-row-4 { top: 240.923pt; }
+.tag-row-5 { top: 301.154pt; }
+.tag-row-6 { top: 361.385pt; }
+.tag-row-7 { top: 421.615pt; }
+.tag-row-8 { top: 481.846pt; }
+.tag-row-9 { top: 542.077pt; }
+.tag-row-10 { top: 602.308pt; }
+.tag-row-11 { top: 662.538pt; }
+.tag-row-12 { top: 722.769pt; }
+
+.tag-title,
+.tag-address,
+.tag-date-line {
+    position: absolute;
+    right: 7pt;
+    left: 7pt;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tag-title {
+    top: 1.8pt;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 16.5pt;
+}
+
+.tag-address {
+    top: 18.3pt;
+    text-align: center;
+    font-size: 10pt;
+    line-height: 11pt;
+}
+
+.tag-date-line {
+    height: 11pt;
+    font-size: 10pt;
+    line-height: 11pt;
+}
+
+.tag-date-line span:first-child {
+    position: absolute;
+    left: 0;
+}
+
+.tag-date-line span:last-child {
+    position: absolute;
+    right: 0;
+}
+
+.tag-manufactured { top: 35.6pt; }
+.tag-expiry { top: 47.1pt; }
