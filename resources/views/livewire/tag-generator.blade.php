@@ -2,16 +2,16 @@
     <div class="grid items-start gap-8 lg:grid-cols-2">
         <x-ui.card variant="sectioned">
             <x-ui.card-header>
-                <x-ui.card-title class="text-xl">Expiry tags (4 × 8)</x-ui.card-title>
+                <x-ui.card-title class="text-xl">{{ __('Expiry tags (4 × 8)') }}</x-ui.card-title>
                 <x-ui.card-description>
-                    Enter the information once and download a print-ready sheet of 32 tags.
+                    {{ __('Enter the information once and download a print-ready sheet of 32 tags.') }}
                 </x-ui.card-description>
             </x-ui.card-header>
 
             <x-ui.card-content>
                 <form wire:submit="downloadPdf" class="flex flex-col gap-5">
                     <x-ui.field :data-invalid="$errors->has('title')">
-                        <x-ui.field-label for="title">Title</x-ui.field-label>
+                        <x-ui.field-label for="title">{{ __('Title') }}</x-ui.field-label>
                         <x-ui.input
                             id="title"
                             wire:model.live.debounce.250ms="title"
@@ -24,7 +24,7 @@
                     </x-ui.field>
 
                     <x-ui.field :data-invalid="$errors->has('address')">
-                        <x-ui.field-label for="address">Address</x-ui.field-label>
+                        <x-ui.field-label for="address">{{ __('Address') }}</x-ui.field-label>
                         <x-ui.textarea
                             id="address"
                             wire:model.live.debounce.250ms="address"
@@ -40,11 +40,11 @@
 
                     <div class="grid gap-5 sm:grid-cols-2">
                         <x-ui.field :data-invalid="$errors->has('manufacturedAt')">
-                            <x-ui.field-label>Manufacturing date</x-ui.field-label>
+                            <x-ui.field-label>{{ __('Manufacturing date') }}</x-ui.field-label>
                             <x-ui.date-picker
                                 id="manufactured-at"
                                 wire:model.live="manufacturedAt"
-                                placeholder="Choose manufacturing date"
+                                :placeholder="__('Choose manufacturing date')"
                                 caption-layout="dropdown"
                                 week-start="monday"
                                 width="w-full"
@@ -53,12 +53,12 @@
                         </x-ui.field>
 
                         <x-ui.field :data-invalid="$errors->has('expiresAt')">
-                            <x-ui.field-label>Expiry date</x-ui.field-label>
+                            <x-ui.field-label>{{ __('Expiry date') }}</x-ui.field-label>
                             <x-ui.date-picker
                                 id="expires-at"
                                 wire:model.live="expiresAt"
                                 :min="$manufacturedAt"
-                                placeholder="Choose expiry date"
+                                :placeholder="__('Choose expiry date')"
                                 caption-layout="dropdown"
                                 week-start="monday"
                                 width="w-full"
@@ -70,8 +70,8 @@
                     <x-ui.button type="submit" size="lg" class="w-full sm:w-fit">
                         <x-ui.icon name="download" wire:loading.remove wire:target="downloadPdf" />
                         <x-ui.spinner wire:loading wire:target="downloadPdf" />
-                        <span wire:loading.remove wire:target="downloadPdf">Download PDF</span>
-                        <span wire:loading wire:target="downloadPdf">Generating PDF...</span>
+                        <span wire:loading.remove wire:target="downloadPdf">{{ __('Download PDF') }}</span>
+                        <span wire:loading wire:target="downloadPdf">{{ __('Generating PDF...') }}</span>
                     </x-ui.button>
                 </form>
             </x-ui.card-content>
@@ -79,16 +79,16 @@
 
         <x-ui.card variant="sectioned">
             <x-ui.card-header>
-                <x-ui.card-title class="text-xl">Compact tags (4 × 13)</x-ui.card-title>
+                <x-ui.card-title class="text-xl">{{ __('Compact tags (4 × 13)') }}</x-ui.card-title>
                 <x-ui.card-description>
-                    Create 52 evenly sized tags on a US Letter sheet with corrected margins and spacing.
+                    {{ __('Create 52 evenly sized tags on a US Letter sheet with corrected margins and spacing.') }}
                 </x-ui.card-description>
             </x-ui.card-header>
 
             <x-ui.card-content>
                 <form wire:submit="downloadCompactPdf" class="flex flex-col gap-5">
                     <x-ui.field :data-invalid="$errors->has('compactTitle')">
-                        <x-ui.field-label for="compact-title">Title</x-ui.field-label>
+                        <x-ui.field-label for="compact-title">{{ __('Title') }}</x-ui.field-label>
                         <x-ui.input
                             id="compact-title"
                             wire:model.live.debounce.250ms="compactTitle"
@@ -101,7 +101,7 @@
                     </x-ui.field>
 
                     <x-ui.field :data-invalid="$errors->has('compactAddress')">
-                        <x-ui.field-label for="compact-address">Address</x-ui.field-label>
+                        <x-ui.field-label for="compact-address">{{ __('Address') }}</x-ui.field-label>
                         <x-ui.textarea
                             id="compact-address"
                             wire:model.live.debounce.250ms="compactAddress"
@@ -117,11 +117,11 @@
 
                     <div class="grid gap-5 sm:grid-cols-2">
                         <x-ui.field :data-invalid="$errors->has('compactManufacturedAt')">
-                            <x-ui.field-label>Manufacturing date</x-ui.field-label>
+                            <x-ui.field-label>{{ __('Manufacturing date') }}</x-ui.field-label>
                             <x-ui.date-picker
                                 id="compact-manufactured-at"
                                 wire:model.live="compactManufacturedAt"
-                                placeholder="Choose manufacturing date"
+                                :placeholder="__('Choose manufacturing date')"
                                 caption-layout="dropdown"
                                 week-start="monday"
                                 width="w-full"
@@ -130,12 +130,12 @@
                         </x-ui.field>
 
                         <x-ui.field :data-invalid="$errors->has('compactExpiresAt')">
-                            <x-ui.field-label>Expiry date</x-ui.field-label>
+                            <x-ui.field-label>{{ __('Expiry date') }}</x-ui.field-label>
                             <x-ui.date-picker
                                 id="compact-expires-at"
                                 wire:model.live="compactExpiresAt"
                                 :min="$compactManufacturedAt"
-                                placeholder="Choose expiry date"
+                                :placeholder="__('Choose expiry date')"
                                 caption-layout="dropdown"
                                 week-start="monday"
                                 width="w-full"
@@ -147,8 +147,8 @@
                     <x-ui.button type="submit" size="lg" class="w-full sm:w-fit">
                         <x-ui.icon name="download" wire:loading.remove wire:target="downloadCompactPdf" />
                         <x-ui.spinner wire:loading wire:target="downloadCompactPdf" />
-                        <span wire:loading.remove wire:target="downloadCompactPdf">Download 4 × 13 PDF</span>
-                        <span wire:loading wire:target="downloadCompactPdf">Generating PDF...</span>
+                        <span wire:loading.remove wire:target="downloadCompactPdf">{{ __('Download 4 × 13 PDF') }}</span>
+                        <span wire:loading wire:target="downloadCompactPdf">{{ __('Generating PDF...') }}</span>
                     </x-ui.button>
                 </form>
             </x-ui.card-content>

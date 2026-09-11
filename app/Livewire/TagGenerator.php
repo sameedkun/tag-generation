@@ -6,12 +6,10 @@ use App\Actions\GenerateCompactTagsPdf;
 use App\Actions\GenerateExpiryTagsPdf;
 use Illuminate\Contracts\View\View;
 use Livewire\Attributes\Layout;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 #[Layout('layouts::app')]
-#[Title('Expiry Tag Generator')]
 class TagGenerator extends Component
 {
     public string $title = 'A.S BAKERS';
@@ -57,7 +55,7 @@ class TagGenerator extends Component
     protected function messages(): array
     {
         return [
-            'expiresAt.after_or_equal' => 'The expiry date must be on or after the manufacturing date.',
+            'expiresAt.after_or_equal' => __('The expiry date must be on or after the manufacturing date.'),
         ];
     }
 
@@ -78,7 +76,7 @@ class TagGenerator extends Component
             'compactManufacturedAt' => ['required', 'date_format:Y-m-d'],
             'compactExpiresAt' => ['required', 'date_format:Y-m-d', 'after_or_equal:compactManufacturedAt'],
         ], [
-            'compactExpiresAt.after_or_equal' => 'The expiry date must be on or after the manufacturing date.',
+            'compactExpiresAt.after_or_equal' => __('The expiry date must be on or after the manufacturing date.'),
         ]);
 
         return $generateCompactTagsPdf->handle([
@@ -91,6 +89,6 @@ class TagGenerator extends Component
 
     public function render(): View
     {
-        return view('livewire.tag-generator');
+        return view('livewire.tag-generator')->title(__('Expiry Tag Generator'));
     }
 }

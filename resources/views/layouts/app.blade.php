@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ app()->getLocale() === 'ur' ? 'rtl' : 'ltr' }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,22 +22,38 @@
                         </span>
                         <span class="min-w-0">
                             <span class="block truncate text-sm font-semibold sm:text-base">A.S Bakers</span>
-                            <span class="text-muted-foreground hidden text-xs sm:block">Expiry Tag Generator</span>
+                            <span class="text-muted-foreground hidden text-xs sm:block">{{ __('Expiry Tag Generator') }}</span>
                         </span>
                     </a>
 
-                    <x-ui.button
-                        variant="outline"
-                        size="icon"
-                        x-data
-                        x-on:click="$store.theme.toggle()"
-                        x-bind:aria-label="$store.theme.isDark ? 'Use light mode' : 'Use dark mode'"
-                        x-bind:title="$store.theme.mode === 'system' ? 'Using system theme' : `Using ${$store.theme.mode} theme`"
-                    >
-                        <x-ui.icon name="sun" x-show="$store.theme.isDark" x-cloak />
-                        <x-ui.icon name="moon" x-show="!$store.theme.isDark" x-cloak />
-                        <span class="sr-only">Toggle color theme</span>
-                    </x-ui.button>
+                    <div class="flex items-center gap-2">
+                        @php
+                            $otherLocale = app()->getLocale() === 'ur' ? 'en' : 'ur';
+                        @endphp
+                        <x-ui.button
+                            href="{{ route('locale.switch', $otherLocale) }}"
+                            variant="outline"
+                            size="icon"
+                            :aria-label="__('Switch language')"
+                            :title="\App\Http\Middleware\SetLocale::SUPPORTED[$otherLocale]"
+                        >
+                            <x-ui.icon name="languages" />
+                            <span class="sr-only">{{ __('Switch language') }}</span>
+                        </x-ui.button>
+
+                        <x-ui.button
+                            variant="outline"
+                            size="icon"
+                            x-data
+                            x-on:click="$store.theme.toggle()"
+                            x-bind:aria-label="$store.theme.isDark ? {{ Illuminate\Support\Js::from(__('Use light mode')) }} : {{ Illuminate\Support\Js::from(__('Use dark mode')) }}"
+                            x-bind:title="$store.theme.mode === 'system' ? {{ Illuminate\Support\Js::from(__('Using system theme')) }} : ($store.theme.isDark ? {{ Illuminate\Support\Js::from(__('Using dark theme')) }} : {{ Illuminate\Support\Js::from(__('Using light theme')) }})"
+                        >
+                            <x-ui.icon name="sun" x-show="$store.theme.isDark" x-cloak />
+                            <x-ui.icon name="moon" x-show="!$store.theme.isDark" x-cloak />
+                            <span class="sr-only">{{ __('Toggle color theme') }}</span>
+                        </x-ui.button>
+                    </div>
                 </nav>
             </header>
 

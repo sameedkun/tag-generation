@@ -1,0 +1,28 @@
+{
+    "Expiry Tag Generator": "ایکسپائری ٹیگ جنریٹر",
+    "Switch language": "زبان بدلیں",
+    "Toggle color theme": "کلر تھیم بدلیں",
+    "Use light mode": "لائٹ موڈ اپنائیں",
+    "Use dark mode": "ڈارک موڈ اپنائیں",
+    "Using system theme": "سسٹم تھیم استعمال ہو رہا ہے",
+    "Using dark theme": "ڈارک تھیم استعمال ہو رہا ہے",
+    "Using light theme": "لائٹ تھیم استعمال ہو رہا ہے",
+
+    "Expiry tags (4 × 8)": "ایکسپائری ٹیگز (4 × 8)",
+    "Enter the information once and download a print-ready sheet of 32 tags.": "معلومات ایک بار درج کریں اور 32 ٹیگز کی پرنٹ کے لیے تیار شیٹ ڈاؤن لوڈ کریں۔",
+    "Compact tags (4 × 13)": "کمپیکٹ ٹیگز (4 × 13)",
+    "Create 52 evenly sized tags on a US Letter sheet with corrected margins and spacing.": "درست حاشیوں اور فاصلے کے ساتھ US لیٹر شیٹ پر 52 برابر سائز کے ٹیگز بنائیں۔",
+
+    "Title": "عنوان",
+    "Address": "پتہ",
+    "Manufacturing date": "تیاری کی تاریخ",
+    "Expiry date": "ختم ہونے کی تاریخ",
+    "Choose manufacturing date": "تیاری کی تاریخ منتخب کریں",
+    "Choose expiry date": "ختم ہونے کی تاریخ منتخب کریں",
+
+    "Download PDF": "پی ڈی ایف ڈاؤن لوڈ کریں",
+    "Download 4 × 13 PDF": "4 × 13 پی ڈی ایف ڈاؤن لوڈ کریں",
+    "Generating PDF...": "پی ڈی ایف تیار ہو رہی ہے...",
+
+    "The expiry date must be on or after the manufacturing date.": "ختم ہونے کی تاریخ تیاری کی تاریخ کے برابر یا اس کے بعد ہونی چاہیے۔"
+}
