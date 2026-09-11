@@ -25,30 +25,30 @@ body {
 .tag {
     position: absolute;
     box-sizing: border-box;
-    width: 153pt;
-    height: 60.231pt;
+    width: 148.5pt;
+    height: 59.538pt;
     overflow: hidden;
     border: 0.5pt solid #000;
 }
 
-.tag-column-0 { left: 0; }
-.tag-column-1 { left: 153pt; }
+.tag-column-0 { left: 9pt; }
+.tag-column-1 { left: 157.5pt; }
 .tag-column-2 { left: 306pt; }
-.tag-column-3 { left: 459pt; }
+.tag-column-3 { left: 454.5pt; }
 
-.tag-row-0 { top: 0; }
-.tag-row-1 { top: 60.231pt; }
-.tag-row-2 { top: 120.462pt; }
-.tag-row-3 { top: 180.692pt; }
-.tag-row-4 { top: 240.923pt; }
-.tag-row-5 { top: 301.154pt; }
-.tag-row-6 { top: 361.385pt; }
-.tag-row-7 { top: 421.615pt; }
-.tag-row-8 { top: 481.846pt; }
-.tag-row-9 { top: 542.077pt; }
-.tag-row-10 { top: 602.308pt; }
-.tag-row-11 { top: 662.538pt; }
-.tag-row-12 { top: 722.769pt; }
+.tag-row-0 { top: 9pt; }
+.tag-row-1 { top: 68.538pt; }
+.tag-row-2 { top: 128.077pt; }
+.tag-row-3 { top: 187.615pt; }
+.tag-row-4 { top: 247.154pt; }
+.tag-row-5 { top: 306.692pt; }
+.tag-row-6 { top: 366.231pt; }
+.tag-row-7 { top: 425.769pt; }
+.tag-row-8 { top: 485.308pt; }
+.tag-row-9 { top: 544.846pt; }
+.tag-row-10 { top: 604.385pt; }
+.tag-row-11 { top: 663.923pt; }
+.tag-row-12 { top: 723.462pt; }
 
 .tag-title,
 .tag-address,

@@ -22,7 +22,7 @@ class TagGenerator extends Component
 
     public string $expiresAt = '';
 
-    public string $compactTitle = 'EID Bakers';
+    public string $compactTitle = 'A.S Bakers';
 
     public string $compactAddress = 'Faisalabad';
 
